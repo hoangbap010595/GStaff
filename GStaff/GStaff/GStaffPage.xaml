@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:controlsImage="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             xmlns:local="clr-namespace:GStaff;assembly=GStaff"
+             x:Class="GStaff.GStaffPage">
+    <MasterDetailPage.Master>
+        <ContentPage Icon="ic_dashboard_black_36dp.png" Title="Menu" BackgroundColor="#333333">
+            <!-- Menu Title background color -->
+            <!-- Slide out Menu -->
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+                <StackLayout Orientation="Vertical">
+                    <controls:CircleImage Margin="10" BorderThickness="3" BorderColor="White" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" Source="http://upload.wikimedia.org/wikipedia/commons/5/55/Tamarin_portrait.JPG"></controls:CircleImage>
+                    <Label Text="lchoang1995@gmail.com" FontSize="Small" HorizontalOptions="Center" TextColor="White"/>
+                </StackLayout>
+                <ListView x:Name="MenuListView" ItemsSource="{Binding MainMenuItems}" ItemSelected="MenuListView_ItemSelected" VerticalOptions="FillAndExpand" SeparatorVisibility="Default" BackgroundColor="#f5f5f5">
+                    <!-- Menu background color -->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <controlsImage:TintedImage Source="{Binding Icon}" HeightRequest="30" WidthRequest="30" TintColor="{StaticResource Primary}"/>
+                                    <Label  x:Name="{Binding NoID}" Grid.Column="1" Text="{Binding Title}" VerticalOptions="FillAndExpand" TextColor="Black"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GStaff.LoginPage"
+             xmlns:cusControl="clr-namespace:GStaff.RenderControls">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" Padding="20" Spacing="30">
+                <Image HeightRequest="128"
+                       WidthRequest="128"
+                       BackgroundColor="#D259C2"
+                       HorizontalOptions="Center"/>
+                <Frame BackgroundColor="{StaticResource Primary}" CornerRadius="5"
+                       HasShadow="True">
+                    <StackLayout Orientation="Vertical"
+                                 Spacing="10">
+                        <cusControl:RenEntry x:Name="txtUsername"
+                               Text="{Binding Username}"
+                               Placeholder="Username"
+                               HeightRequest="40"                
+                               TextColor="{StaticResource colorPrimary}"
+                                PlaceholderColor="{StaticResource colorPrimary}"
+                                BackgroundColor="Teal"
+                                HorizontalOptions="FillAndExpand"/>
+                        <cusControl:RenEntry x:Name="txtPassword"
+                               Text="{Binding Password}"
+                               Placeholder="Password"
+                               IsPassword="True"
+                               HeightRequest="40"
+                               TextColor="{StaticResource colorPrimary}"
+                                PlaceholderColor="{StaticResource colorPrimary}"/>
+                    </StackLayout>
+                </Frame>
+                <Button x:Name="btnLogin" Text="Login" TextColor="{StaticResource colorPrimary}" FontAttributes="Bold" BorderRadius="25"
+                                FontSize="20" HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource Primary}"/>
+                <Label Text="Wellcome GStaff 1.0"
+                       VerticalOptions="FillAndExpand"
+                       VerticalTextAlignment="End"
+                       Opacity="0.85"
+                       HorizontalOptions="Center"
+                       FontSize="Small" TextColor="{StaticResource LightTextColor}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GStaff.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="Primary">#5c167f</Color>
+            <Color x:Key="PrimaryDark">#672887</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="colorPrimary">#ffffff</Color>
+            <!-- Button Color -->
+            <Color x:Key="ButtonSuccessColor">#5cb85c</Color>
+            <Color x:Key="ButtonDangerColor">#c9302c</Color>
+            <Color x:Key="ButtonWarningColor">#d58512</Color>
+            <Color x:Key="ButtonInfoColor">#31b0d5</Color>
+
+            <Style x:Key="ButtonPrimary" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BorderColor" Value="#4f0e70" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="ButtonSuccess" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonSuccessColor}"/>
+                <Setter Property="BorderColor" Value="#4cae4c" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="ButtonDanger" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonDangerColor}"/>
+                <Setter Property="BorderColor" Value="#ac2925" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="ButtonWarning" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonWarningColor}"/>
+                <Setter Property="BorderColor" Value="#985f0d" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="ButtonInfo" TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonInfoColor}"/>
+                <Setter Property="BorderColor" Value="#269abc" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>
